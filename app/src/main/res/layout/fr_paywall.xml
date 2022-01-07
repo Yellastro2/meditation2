@@ -50,10 +50,11 @@
 		<Button
 			android:id="@+id/fr_paywallButton"
 			style="@style/BtnPrimary"
+			android:background="@drawable/bkg_solid_btn_pay"
 			android:layout_alignParentBottom="true"
 			android:layout_marginBottom="@dimen/margin_bot_btntwo"
 			android:fontFamily="@font/mont_bold"
-			android:text="Продолжить" />
+			android:text="Попробовать" />
 
 		<LinearLayout
 			android:layout_width="wrap_content"
