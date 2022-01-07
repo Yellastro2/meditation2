@@ -160,7 +160,7 @@ public class FbFiles {
 					mediaPlayer.setOnPreparedListener(null);
 			mediaPlayer.seekTo(fDur-10);
 			mediaPlayer.start();
-			Thread.sleep(500);
+			Thread.sleep(5000);
 			int fPos = mediaPlayer.getCurrentPosition();
 			Log.i(yConst.TAG,"pos: "+fPos);
 			mediaPlayer.stop();
