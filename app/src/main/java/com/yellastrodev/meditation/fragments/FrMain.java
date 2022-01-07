@@ -41,7 +41,7 @@ public class FrMain extends iFragment {
 		//FbFiles.initFB(getContext());
 		mMain.disableBackBtn();
 		mCal = mMain.getDate();
-		
+		mMain.getPreff().edit().putBoolean(yConst.kFirstLaunch,true).apply();
 		mvStatus = fView.findViewById(R.id.fr_mainTextStatus);
 		mvImageStatus = fView.findViewById(R.id.fr_mainImageMain);
 		mvImageS = fView.findViewById(R.id.fr_mainImageDollar);

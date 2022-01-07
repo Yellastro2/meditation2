@@ -274,7 +274,7 @@ public class MainActivity extends FragmentActivity {
 			findViewById(mFrameId));
 			
 		checkSubs();
-		if(getPreff().getBoolean(kFirstLaunch,false)){
+		if(getPreff().getBoolean(yConst.kFirstLaunch,false)){
 
 			if((fAction!=null&&fAction.equals(yConst.kAffirm))
 				||(fArg==45))
@@ -290,7 +290,7 @@ public class MainActivity extends FragmentActivity {
 
 			openFrame(new FrOnboadr(),false);
 			sendAnality("first_launch");
-			getPreff().edit().putBoolean(kFirstLaunch,true).apply();
+
 		}
 	}
 

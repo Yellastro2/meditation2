@@ -151,15 +151,16 @@ public class FbFiles {
 
 	boolean checkFile(final Context fCtx,final int fId){
 		try {
-			File fFile = new File(fCtx.getExternalCacheDir(),
-					yConst.sFiles[fId] + ".mp3");
+			final String fName = yConst.sFiles[fId]  + yConst.sFileEnd;
+			final File fFile = new File(fCtx.getExternalCacheDir(),
+					fName);
 			Log.i(yConst.TAG,"check file "+fFile.getName());
 			MediaPlayer mediaPlayer = MediaPlayer.create(fCtx, Uri.fromFile(fFile));
 
 					int fDur = mediaPlayer.getDuration();
 			Log.i(yConst.TAG,"dur: "+ fDur);
 					mediaPlayer.setOnPreparedListener(null);
-			String fName = fId + yConst.sFileEnd;
+
 			StorageReference reference = sStorageRef.child(fName);
 			reference.getMetadata().addOnSuccessListener(new OnSuccessListener<StorageMetadata>() {
 				@Override
@@ -170,6 +171,7 @@ public class FbFiles {
 							" localv- "+fLocalSize);
 
 					if(fFvSize!=fLocalSize) {
+
 						fFile.delete();
 						try {
 							loadFile(fCtx, fId, fName, new Runnable() {

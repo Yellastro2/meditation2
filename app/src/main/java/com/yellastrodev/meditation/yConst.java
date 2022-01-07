@@ -63,4 +63,5 @@ fd4acd47-a3ce-4f25-bece-3beafb83cc91*/
 
 	public static String ksecondLast = "kSecLast";
 	public static String kFirstDay = "firstDay";
+	public static String kFirstLaunch = "firstlaunch";
 }
