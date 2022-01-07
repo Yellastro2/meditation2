@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:gravity="center">
+
+	<View
+		android:id="@+id/it_seekLegView"
+		android:background="?android:attr/dividerHorizontal"
+		android:layout_width="1dp"
+		android:layout_height="10dp"
+		android:layout_margin="2dp"/>
+
+	<TextView
+		android:textColor="@color/greyText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1"
+		android:gravity="center"
+		android:id="@+id/it_seeklegendText"
+		style="@style/justText"/>
+
+</LinearLayout>
+

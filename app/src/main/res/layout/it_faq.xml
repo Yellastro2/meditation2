@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	
+	android:animateLayoutChanges="true"
+	android:paddingTop="10dp">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bkg_solid_white"
+		android:layout_marginTop="10dp">
+
+		<RelativeLayout
+			android:background="@drawable/bkg_solid_lilcorn_ligth"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/it_faqRelativeTitle">
+
+			<ImageView
+				android:id="@+id/it_faqImageArrow"
+				android:src="@android:drawable/ic_delete"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_margin="@dimen/marg_faq"/>
+
+			<TextView
+				android:fontFamily="@font/montserrat_light"
+				android:id="@+id/it_faqTextTitle"
+				android:layout_centerVertical="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Text"
+				style="@style/justText"
+				android:layout_margin="@dimen/marg_faq"
+				android:textColor="#FFFFFFFF"
+				android:layout_toLeftOf="@id/it_faqImageArrow"
+				android:layout_alignParentLeft="true"
+				android:gravity="left"/>
+
+		</RelativeLayout>
+
+		<TextView
+			android:fontFamily="@font/montserrat_light"
+			android:visibility="gone"
+			android:id="@+id/it_faqTextBody"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_below="@id/it_faqRelativeTitle"
+			android:layout_margin="@dimen/marg_faq"
+			android:layout_marginBottom="20dp"
+			style="@style/justText"/>
+
+	</RelativeLayout>
+
+</LinearLayout>
+

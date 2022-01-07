@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bkg_dial">
+
+	<ImageView
+		android:src="@drawable/ic_esc"
+		android:layout_width="@dimen/imgbtn_size"
+		android:layout_height="@dimen/imgbtn_size"
+		android:layout_alignParentRight="true"
+		android:layout_margin="20dp"
+		android:id="@+id/dialtextImageView1"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/dialtextImageView1"
+		android:gravity="center">
+
+		<TextView
+			android:id="@+id/dial_textTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Text"
+			style="@style/HeadText"
+			android:layout_margin="20dp"/>
+
+		<TextView
+			android:fontFamily="@font/montserrat_light"
+			android:layout_marginHorizontal="20dp"
+			android:id="@+id/dial_textTextView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Text"
+			style="@style/smallgreytext"
+			android:gravity="center"
+			android:layout_marginBottom="20dp"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+

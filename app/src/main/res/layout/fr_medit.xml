@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="wrap_content">
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/toolbar"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:background="@color/background"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:baseline="100dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="0dp"
+			android:layout_marginBottom="40dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/frmeditRelativeLayout1">
+
+			<ImageView
+				android:src="@drawable/cloud2"
+				android:layout_width="@dimen/imgmain_size"
+				android:layout_height="@dimen/imgmain_size"
+				android:id="@+id/fr_meditImageCloud1"
+				android:scaleType="matrix"/>
+
+			<ImageView
+				android:src="@drawable/cloud1"
+				android:layout_width="@dimen/imgmain_size"
+				android:layout_height="@dimen/imgmain_size"
+				android:id="@+id/fr_meditImageCloud2"
+				android:scaleType="matrix"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:baseline="100dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="0dp"
+			android:layout_marginBottom="40dp"
+			android:layout_width="@dimen/imgmain_size"
+			android:layout_height="@dimen/imgmain_size_btn">
+
+			<ImageView
+				android:tint="#ffffff"
+				android:src="@drawable/ic_play"
+				android:id="@+id/fr_meditImagePlay"
+				android:layout_width="120dp"
+				android:layout_height="120dp"
+				android:layout_centerInParent="true"
+				android:scaleType="fitCenter"/>
+
+			<RelativeLayout
+				android:id="@+id/fr_meditImagePause"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_centerInParent="true">
+
+				<ImageView
+					android:layout_alignParentLeft="true"
+					android:src="@drawable/ic_pause"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<ImageView
+					android:layout_alignParentRight="true"
+					android:src="@drawable/ic_pause"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_marginTop="20dp"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/bkg_topround"
+			android:gravity="top|center"
+			android:padding="30dp"
+			android:layout_alignParentBottom="true">
+
+			<TextView
+				android:gravity="center"
+				android:textColor="@color/darkgrey"
+				android:fontFamily="@font/mont"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/medit_head"
+				style="@style/HeadText"
+				android:layout_marginHorizontal="10dp"
+				android:layout_marginBottom="15dp"
+				android:layout_marginTop="20dp"/>
+
+			<TextView
+				android:id="@+id/fr_meditTextTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="00:00"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				style="@style/justText"/>
+
+			<LinearLayout
+				android:gravity="left"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="3dp">
+
+				<ProgressBar
+					android:max="100"
+					android:id="@+id/fr_meditSeekPrg"
+					android:progressDrawable="@drawable/seekbar_styled"
+					android:layout_width="match_parent"
+					style="?android:attr/progressBarStyleHorizontal"
+					android:layout_height="wrap_content"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/fr_meditTextComplHead"
+				android:visibility="invisible"
+				android:textColor="@color/greendark"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/medit_compl_head"
+				style="@style/HeadText"
+				android:fontFamily="@font/mont_bold"
+				android:layout_marginTop="15dp"/>
+
+			<TextView
+				android:fontFamily="@font/montserrat_light"
+				android:textColor="#FFAFAFAF"
+				android:id="@+id/fr_meditTextComlBody"
+				android:visibility="invisible"
+				android:layout_marginTop="10dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/medit_compl_body"
+				style="@style/justText"
+				android:layout_marginBottom="50dp"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</LinearLayout>
+

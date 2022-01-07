@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+
+		
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<Button
+			android:textSize="@dimen/text_medium"
+			android:layout_marginVertical="@dimen/margin_qw_items"
+			android:textAllCaps="false"
+			android:gravity="left|center"
+			android:padding="@dimen/padding_qw_items"
+	android:textColor="@color/PrimaryLight"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bkg_stroked_lilround"
+	>
+
+</Button>
+	</LinearLayout>

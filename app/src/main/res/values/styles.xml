@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+
+	</style>
+	
+	<style name="HeadText" >
+		<item name="android:fontFamily">@font/mont</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">@dimen/text_large</item>
+	</style>
+	
+	<style name="justText" >
+		<item name="android:textColor">@color/darkgrey</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+	</style>
+	
+	<style name="smallgreytext" >
+		<item name="android:textColor">#FFAFAFAF</item>
+		<item name="android:textSize">@dimen/text_small</item>
+	</style> 
+	
+	<style name="BtnPrimary" >
+		<item name="android:textAllCaps">false</item>
+		<item name="android:layout_height">@dimen/btn_prim_heigth</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:background">@drawable/bkg_solid_btn_prim</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:layout_marginHorizontal">20dp</item>
+		<item name="android:textSize">@dimen/text_large</item>
+	</style>
+	
+	
+</resources>

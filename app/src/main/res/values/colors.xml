@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#617DF8</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+	
+	<color name="PrimaryLight">#8F9FEA</color>
+	<color name="cloud">#FFA9B1F2</color>
+	<color name="cloudLight">#FFCBD4F3</color>
+	<color name="background">#FFF2F3F8</color>
+	<color name="red">#FFE05B6E</color>
+	<color name="yellow">#F7DD64</color>
+	<color name="green">#FF91FBBD</color>
+	<color name="redText">#FFEE3253</color>
+	<color name="yellowText">#FFEBCA1B</color>
+	<color name="greenText">#FF16D27D</color>
+	<color name="greendark">#FF81F3AE</color>
+	<color name="grey">#FFE4E4E4</color>
+	<color name="greyText">#FFAFAFAF</color>
+	<color name="darkgrey">#FF5B5B5B</color>
+</resources>

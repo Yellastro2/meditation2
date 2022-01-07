@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@color/background"
+	android:paddingTop="@dimen/activity_toolbar_margin"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView
+		android:textColor="@color/colorPrimary"
+		android:textStyle="normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/main_head"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="@dimen/margin_main_top"
+		style="@style/HeadText"
+		android:id="@+id/frmainTextView1"/>
+
+	<TextView
+		android:textColor="@color/yellow"
+		android:textStyle="normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/level_mid"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="@dimen/margin_midle_10"
+		style="@style/HeadText"
+		android:layout_below="@id/frmainTextView1"
+		android:id="@+id/fr_mainTextStatus"/>
+
+	<RelativeLayout
+		android:layout_marginTop="@dimen/margin_main_imagetop"
+		android:id="@+id/fr_mainRelativeImage"
+		android:layout_width="@dimen/imgmain_human_size"
+		android:layout_height="@dimen/imgmain_human_size"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@id/fr_mainTextStatus">
+
+		<ImageView
+			android:src="@drawable/ic_yellow"
+			android:layout_width="@dimen/imgmain_human_size"
+			android:layout_height="@dimen/imgmain_human_size"
+			android:id="@+id/fr_mainImageMain"
+			android:scaleType="fitCenter"/>
+
+		<ImageView
+			android:layout_width="@dimen/imgmain_human_dollar_size"
+			android:layout_height="@dimen/imgmain_human_dollar_size"
+			android:layout_centerInParent="true"
+			android:id="@+id/fr_mainImageDollar"
+			android:visibility="gone"
+			android:src="@drawable/x"/>
+
+	</RelativeLayout>
+
+	<TextView
+		android:layout_marginHorizontal="20dp"
+		android:gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/main_body"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_below="@id/fr_mainRelativeImage"
+		android:layout_centerHorizontal="true"
+		style="@style/smallgreytext"
+		android:fontFamily="@font/montserrat_light"
+		android:layout_marginTop="@dimen/margin_main_imagebtm"
+		android:id="@+id/frmainTextView3"/>
+
+	<RelativeLayout
+		android:layout_below="@id/frmainTextView3"
+		android:id="@+id/fr_mainRelativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/margin_midle_15">
+
+		<LinearLayout
+			android:layout_height="@dimen/btn_height_big"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:layout_marginHorizontal="0dp"
+			android:layout_centerHorizontal="true"
+			android:layout_width="@dimen/btn_width"
+			android:id="@+id/fr_mainButtonMedit"
+			style="@style/BtnPrimary"
+			android:background="@drawable/bkg_wave">
+
+			<TextView
+				android:textStyle="normal"
+				android:textColor="#ffffff"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/main_btn_medit"
+				style="@style/HeadText"/>
+
+			<TextView
+				android:layout_marginTop="2dp"
+				android:textColor="@color/grey"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/main_btn_medit"
+				style="@style/smallgreytext"
+				android:id="@+id/fr_mainMeditDesc"/>
+
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/fr_mainImageFaq"
+			android:layout_margin="2dp"
+			android:layout_centerVertical="true"
+			android:layout_width="@dimen/imgbtn_size"
+			android:scaleType="fitCenter"
+			android:layout_height="@dimen/imgbtn_size"
+			android:src="@drawable/ic_ask"
+			android:layout_toRightOf="@id/fr_mainButtonMedit"/>
+
+	</RelativeLayout>
+
+	<Button
+		android:id="@+id/fr_mainButAffirm"
+		android:layout_height="@dimen/btn_height_big"
+		android:textColor="@color/PrimaryLight"
+		android:layout_centerHorizontal="true"
+		android:text="@string/main_btn_affim"
+		android:layout_width="@dimen/btn_width"
+		android:layout_below="@id/fr_mainRelativeLayout"
+		style="@style/BtnPrimary"
+		android:layout_marginTop="@dimen/margin_15"
+		android:background="@drawable/bkg_stroke_bigcorn"/>
+
+	<TextView
+		android:visibility="invisible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fr_mainTextPolicy"
+		android:text="@string/politic_btn"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		style="@style/smallgreytext"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="20dp"
+		android:gravity="center"/>
+
+	<LinearLayout
+		android:visibility="gone"
+		android:id="@+id/fr_mainLinearTest"
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<Button
+			android:id="@+id/fr_mainButtestDefalt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="сброс"
+			android:background="#FFDB5151"/>
+
+		<Button
+			android:id="@+id/fr_mainButtestplus"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="+час"
+			android:background="#FF60D156"/>
+
+		<Button
+			android:id="@+id/fr_mainButSetPlayed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="прослушать"
+			android:background="#FFD9E044"/>
+
+		<TextView
+			android:id="@+id/fr_mainTestText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#000000"
+	android:layout_width="match_parent"
+	android:fitsSystemWindows="true"
+	android:layout_height="match_parent">
+
+
+
+	<TextView
+		android:id="@+id/fr_paywallTextTerms"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="@dimen/margin_payw_bot_text"
+		android:gravity="center"
+		android:text="Купив подписку вы соглашаетесь с нашими Условиями и Политикой конфиденциальности"
+		android:textColor="#FFE2E2E2"
+		android:textSize="@dimen/text_xsmall" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="@dimen/margin_bot_btnone"
+		android:background="@drawable/bkg_botroundet_paywall"
+		android:forceDarkAllowed="false">
+
+		<ImageView
+			android:id="@+id/frpaywallImageView1"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/paywall_img_heigth"
+			android:gravity="top"
+			android:scaleType="centerCrop"
+			android:src="@drawable/paywall_img" />
+
+		<TextView
+			android:id="@+id/fr_paywallTextPrice"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="15dp"
+			android:layout_marginBottom="15dp"
+			android:text="3 дня бесплатно, далее 299р / месяц"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="@dimen/text_smediun" />
+
+		<Button
+			android:id="@+id/fr_paywallButton"
+			style="@style/BtnPrimary"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="@dimen/margin_bot_btntwo"
+			android:fontFamily="@font/mont_bold"
+			android:text="Продолжить" />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/fr_paywallButton"
+			android:layout_marginBottom="@dimen/margin_bot_paywal_abowebtn"
+			android:gravity="bottom|center"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/frpaywallTextView2"
+				style="@style/HeadText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/frpaywallImageView1"
+				android:layout_centerHorizontal="true"
+				android:layout_marginHorizontal="10dp"
+				android:layout_marginTop="20dp"
+				android:fontFamily="@font/mont_bold"
+				android:gravity="center"
+				android:text="Получить доступ к\n денежным медитациям и аффирмациям"
+				android:textAppearance="?android:attr/textAppearanceLarge" />
+
+			<TextView
+				style="@style/HeadText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/frpaywallTextView2"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20dp"
+				android:fontFamily="@font/mont_bold"
+				android:text="3 дня бесплатно"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:textColor="@color/colorPrimary" />
+
+		</LinearLayout>
+
+	</RelativeLayout>
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#564345"
+		android:text="оплатить"
+		android:id="@+id/fr_pawalltest"/>
+
+	<ImageView
+		android:src="@drawable/ic_esc"
+		android:layout_width="@dimen/imgbtn_size"
+		android:layout_height="@dimen/imgbtn_size"
+		android:layout_alignParentRight="true"
+		android:layout_margin="20dp"
+		android:id="@+id/fr_paywall_esc"/>
+
+
+</RelativeLayout>
+

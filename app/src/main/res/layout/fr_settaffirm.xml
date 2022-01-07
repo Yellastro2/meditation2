@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="wrap_content">
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/toolbar"/>
+<RelativeLayout
+	
+	android:background="@color/background"
+	android:layout_width="match_parent"
+	
+	android:layout_height="match_parent">
+
+	<TextView
+		android:fontFamily="@font/mont"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/affir_head"
+		style="@style/HeadText"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp"
+		android:id="@+id/fraffirmTextView1"/>
+
+	<TextView
+		android:textColor="@color/colorPrimary"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/affir_textqaq"
+		android:layout_below="@id/fraffirmTextView1"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp"
+		android:id="@+id/fr_affirmTextAsk"/>
+
+	<LinearLayout
+		android:gravity="top|center"
+		android:layout_centerInParent="true"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="40dp"
+			android:gravity="center"
+			android:id="@+id/fraffirmLinearLayout1">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/affir_swich"
+				style="@style/justText"/>
+
+			<Switch
+				android:id="@+id/fr_settaffirmSwitch"
+				android:gravity="center"
+				android:track="@drawable/switch_bkg"
+				android:thumb="@drawable/switch_thumb"
+				android:layout_width="@dimen/switch_width"
+				android:switchMinWidth="30dp"
+				android:layout_height="@dimen/switch_height"
+				android:layout_marginLeft="10dp"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:fontFamily="@font/mont"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/affir_count"
+			android:layout_below="@id/fraffirmLinearLayout1"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="15dp"
+			style="@style/HeadText"
+			android:id="@+id/fraffirmTextView3"
+			android:textStyle="normal"/>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/fraffirmTextView3"
+			android:id="@+id/fraffirmLinearLayout2">
+
+			<SeekBar
+				android:paddingLeft="40dp"
+				android:paddingRight="40dp"
+				android:id="@+id/fr_affirmSeekPrg"
+				android:minHeight="@dimen/seekminheigth"
+				android:minWidth="@dimen/seekminheigth"
+				android:maxHeight="@dimen/seekminheigth"
+				android:maxWidth="@dimen/seekminheigth"
+				android:splitTrack="false"
+				android:elevation="5dp"
+				android:max="4"
+				android:progressDrawable="@drawable/seekbar_fullgreen"
+				android:thumb="@drawable/thumb_biggreen"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="3dp"/>
+
+			<LinearLayout
+				android:id="@+id/fr_affirmLinSeekbarLegend"
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/affir_loockat"
+			android:layout_below="@id/fraffirmLinearLayout2"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="30dp"
+			android:id="@+id/fraffirmTextView4"
+			style="@style/smallgreytext"/>
+
+		<Button
+			android:textSize="@dimen/text_medium"
+			android:paddingHorizontal="15dp"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/btn_height_big"
+			android:text="@string/affir_btn"
+			android:layout_below="@id/fraffirmTextView4"
+			style="@style/BtnPrimary"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="15dp"
+			android:background="@drawable/bkg_wave_wile"
+			android:id="@+id/fraffirmButton1"/>
+
+		<TextView
+			android:id="@+id/fr_settaffirmTextOnPush"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Уведомление отправлено"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="25dp"
+			android:layout_marginBottom="70dp"
+			style="@style/justText"
+			android:visibility="invisible"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/affir_bottom"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="@dimen/marg_setaff_bott"
+		android:gravity="center"
+		style="@style/smallgreytext"/>
+
+</RelativeLayout>
+</LinearLayout>

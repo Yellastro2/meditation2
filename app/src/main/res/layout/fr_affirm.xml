@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	
+	android:background="@drawable/image_1">
+	
+	<RelativeLayout
+		
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/activity_toolbar_margin">
+	<ImageView
+		android:layout_alignParentBottom="true"
+		android:id="@+id/fr_affirmImageBack"
+		android:src="@drawable/ic_back_white"
+		android:layout_width="@dimen/imgbtn_size"
+		android:layout_height="@dimen/imgbtn_size"
+		android:layout_margin="10dp"/>
+
+	<ImageView
+		android:layout_alignParentBottom="true"
+		android:id="@+id/fr_affirmImageSett"
+		android:src="@drawable/ic_sett"
+		android:layout_width="@dimen/imgbtn_size"
+		android:layout_height="@dimen/imgbtn_size"
+		android:layout_margin="10dp"
+		android:layout_alignParentRight="true"/>
+	
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_margin="10dp"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="500dp"
+		android:layout_centerInParent="true"
+		android:gravity="center"
+		android:background="@drawable/bkg_affirm_text">
+
+		<TextView
+			android:layout_margin="20dp"
+			android:fontFamily="@font/mont_bold"
+			android:id="@+id/fr_affirmTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:gravity="center"
+			style="@style/HeadText"
+			android:textColor="#FFFFFFFF"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+

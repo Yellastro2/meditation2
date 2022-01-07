@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016146256440",
+    "project_id": "money-meditation",
+    "storage_bucket": "money-meditation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016146256440:android:ad21e2cf27e83e9cd33ccd",
+        "android_client_info": {
+          "package_name": "com.money.meditation.affirmation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016146256440-kgcjqcabl5jbln2fsh38aon8335d29fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH9s9PVp5RkyounTicmU1x2MYlnbwrXb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016146256440-kgcjqcabl5jbln2fsh38aon8335d29fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

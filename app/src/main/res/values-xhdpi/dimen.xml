@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="dimen_type">725</integer>
+	
+	<dimen name="paywall_img_heigth">420dp</dimen>
+
+	<dimen name="margin_15">15dp</dimen>
+	<dimen name="margin_onboard_top">20dp</dimen>
+	<dimen name="margin_onboard_imgtop">10dp</dimen>
+	<dimen name="margin_onboard_img2top">15dp</dimen>
+
+	<dimen name="margin_qw_items">5dp</dimen>
+	<dimen name="padding_qw_items">12dp</dimen>
+
+	<dimen name="margin_main_top">10dp</dimen>
+	<dimen name="margin_midle_10">1dp</dimen>
+	<dimen name="margin_midle_15">28dp</dimen>
+	
+	<dimen name="margin_main_imagetop">-30dp</dimen>
+	<dimen name="margin_main_imagebtm">-50dp</dimen>
+
+	<dimen name="margin_bottom_btn">100dp</dimen>
+	<dimen name="margin_bot_btnone">55dp</dimen>
+	<dimen name="margin_bot_btntwo">45dp</dimen>
+	<dimen name="margin_payw_bot_text">10dp</dimen>
+	
+	<dimen name="marg_setaff_bott">50dp</dimen>
+
+	<dimen name="marg_faq">20dp</dimen>
+
+	<dimen name="margin_bot_paywal_abowebtn">30dp</dimen>
+
+	<dimen name="btn_prim_heigth">55dp</dimen>
+
+    <dimen name="lil_corner">7dp</dimen>
+	<dimen name="norm_corner">20dp</dimen>
+	<dimen name="lil_stroke">2dp</dimen>
+	<dimen name="big_corner">40dp</dimen>
+	<dimen name="btn_height_big">65dp</dimen>
+	<dimen name="btn_width">250dp</dimen>
+
+	<dimen name="imgbtn_size">30dp</dimen>
+	<dimen name="imgmain_size">320dp</dimen>
+	<dimen name="imgmain_size_btn">350dp</dimen>
+	
+	<dimen name="imgmain_human_size">380dp</dimen>
+	<dimen name="imgmain_human_dollar_size">55dp</dimen>
+
+	<dimen name="img_onboard">270dp</dimen>
+
+	<dimen name="imgmain_size_btnlay">400dp</dimen>
+
+	<integer name="anim_durone">800</integer>
+	<integer name="anim_dursec">300</integer>
+
+	<dimen name="seekminheigth">5dp</dimen>
+
+	<dimen name="switch_height">25dp</dimen>
+	<dimen name="switch_width">50dp</dimen>
+	<dimen name="switch_thumb2">25dp</dimen>
+
+	<dimen name="switch_thumb">5dp</dimen>
+
+	<dimen name="text_xsmall">12sp</dimen>
+	<dimen name="text_small">14sp</dimen>
+	<dimen name="text_smediun">15sp</dimen>
+	<dimen name="text_medium2">17sp</dimen>
+	<dimen name="text_medium">18sp</dimen>
+	<dimen name="text_large">22sp</dimen>
+	<dimen name="text_notsmall">5dp</dimen>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="wrap_content">
+	
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/toolbar"/>
+	
+<ScrollView
+	
+	android:id="@+id/fr_faqScrollView"
+	android:layout_width="match_parent"
+	
+	android:clickable="false"
+	android:animateLayoutChanges="true"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:animateLayoutChanges="true"
+		android:background="@color/background"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="10dp">
+
+		<TextView
+			android:textColor="@color/darkgrey"
+			android:gravity="center"
+			android:fontFamily="@font/mont"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/faq_head"
+			style="@style/HeadText"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="20dp"/>
+		
+		<LinearLayout
+			android:id="@+id/fr_faqLinearLayout"
+			android:animateLayoutChanges="true"
+			android:background="@color/background"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="10dp"/>
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/fr_faqTextPolicy"
+			android:text="@string/politic_btn"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="20dp"
+			android:layout_marginBottom="20dp"
+			android:gravity="center"/>
+
+	</LinearLayout>
+	
+	
+
+</ScrollView>
+
+</LinearLayout>
+
