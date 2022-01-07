@@ -160,6 +160,8 @@ public class FbFiles {
 					mediaPlayer.setOnPreparedListener(null);
 			mediaPlayer.seekTo(fDur-10);
 			mediaPlayer.start();
+			int fPos = mediaPlayer.getCurrentPosition();
+			Log.i(yConst.TAG,"pos: "+fPos);
 			mediaPlayer.stop();
 			mediaPlayer.release();
 			//mediaPlayer.prepare();
