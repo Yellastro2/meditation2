@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
@@ -158,13 +159,36 @@ public class FbFiles {
 					int fDur = mediaPlayer.getDuration();
 			Log.i(yConst.TAG,"dur: "+ fDur);
 					mediaPlayer.setOnPreparedListener(null);
-			mediaPlayer.seekTo(fDur-10);
-			mediaPlayer.start();
-			Thread.sleep(5000);
-			int fPos = mediaPlayer.getCurrentPosition();
-			Log.i(yConst.TAG,"pos: "+fPos);
-			mediaPlayer.stop();
-			mediaPlayer.release();
+			String fName = fId + yConst.sFileEnd;
+			StorageReference reference = sStorageRef.child(fName);
+			reference.getMetadata().addOnSuccessListener(new OnSuccessListener<StorageMetadata>() {
+				@Override
+				public void onSuccess(StorageMetadata storageMetadata) {
+					long fFvSize =  storageMetadata.getSizeBytes();
+					long fLocalSize = fFile.length();
+					Log.i(yConst.TAG,"The size of the fb file is:"+fFvSize+
+							" localv- "+fLocalSize);
+
+					if(fFvSize!=fLocalSize) {
+						fFile.delete();
+						try {
+							loadFile(fCtx, fId, fName, new Runnable() {
+								@Override
+								public void run() {
+
+								}
+							});
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}).addOnFailureListener(new OnFailureListener() {
+				@Override
+				public void onFailure(@NonNull Exception exception) {
+
+				}
+			});
 			//mediaPlayer.prepare();
 			return mediaPlayer != null;
 		}catch(Exception e){
