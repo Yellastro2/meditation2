@@ -153,9 +153,11 @@ public class FbFiles {
 			File fFile = new File(fCtx.getExternalCacheDir(),
 					yConst.sFiles[fId] + ".mp3");
 			MediaPlayer mediaPlayer = MediaPlayer.create(fCtx, Uri.fromFile(fFile));
-			Log.i(yConst.TAG,"dur: "+
-					mediaPlayer.getDuration());
-			mediaPlayer.setOnPreparedListener(null);
+
+					int fDur = mediaPlayer.getDuration();
+			Log.i(yConst.TAG,"dur: "+ fDur);
+					mediaPlayer.setOnPreparedListener(null);
+			mediaPlayer.seekTo(fDur-10);
 			//mediaPlayer.prepare();
 			return mediaPlayer != null;
 		}catch(Exception e){
