@@ -86,7 +86,7 @@ public class MainActivity extends FragmentActivity {
 	
 	public void sendException(final Exception e){
 	    e.printStackTrace();
-        Looper.prepare();
+
 		final AlertDialog fDial = new AlertDialog.Builder(this)
 			.setTitle("Ошибка")
 			.setMessage("В приложении произошла ошибка. Пожалуйста, отправьте информацию об этом нам")
