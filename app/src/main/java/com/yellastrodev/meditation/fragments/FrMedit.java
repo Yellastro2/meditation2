@@ -84,7 +84,7 @@ public class FrMedit extends iFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View fView = inflater.inflate(R.layout.fr_medit, null);
 		try{
-		
+		isSaveTime = true;
 		mPreff = mMain.getPreff();
 		mMedit = mMain.getPreff().getInt(yConst.kCurentMedit, 0);
 		int fPlayDay = mMain.getPreff().getInt(yConst.isPlayToday, -2);
@@ -195,7 +195,7 @@ public class FrMedit extends iFragment {
 		super.onPause();
 		if(isServiceStart)
 		{
-			totalPause();
+
 			if(mService!=null){
 				int fPerc= mService.getProgressPercs();
 				if(isSaveTime){
@@ -213,6 +213,7 @@ public class FrMedit extends iFragment {
                             fPerc);
                 }
 			}
+			totalPause();
 		}
 		}catch(Exception e){mMain.sendException(e);}
 	}
@@ -461,7 +462,7 @@ public class FrMedit extends iFragment {
 			.setPositiveButton(R.string.medit_esc_btnyes, new DialogInterface.OnClickListener(){
 				@Override
 				public void onClick(DialogInterface p1, int p2) {
-					totalPause();
+					isSaveTime = false;
 					mMain.forseBackPress();
 				}
 			})
