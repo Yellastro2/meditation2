@@ -111,8 +111,8 @@ public class MainActivity extends FragmentActivity {
 				
 			})
 			.create();
-			
-		mvBackBtn.post(new Runnable(){
+			runOnUiThread(
+		new Runnable(){
 				@Override
 				public void run() {
 					fDial.getWindow().setBackgroundDrawableResource(R.drawable.bkg_dial);
