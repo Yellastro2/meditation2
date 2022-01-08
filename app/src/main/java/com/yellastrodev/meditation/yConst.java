@@ -50,7 +50,7 @@ fd4acd47-a3ce-4f25-bece-3beafb83cc91*/
 	public static String kAffirm = "affirm";
 
 	public static final int sDefaultFreq = 3;
-
+	public static final String kTimePause = "timepause";
 	public static String isAffirm = "isaffirm";
 
 	public static String kFreq = "frequency";

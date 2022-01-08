@@ -43,7 +43,7 @@ public class MyService extends Service implements MediaPlayer.OnPreparedListener
     public int onStartCommand(Intent intent, int flags, int startId) 
 	{
 		int fIndex = intent.getIntExtra(yConst.kCurentMedit, 0);
-
+long fProg = intent.getLongExtra(yConst.kTimePause,0);
 		// if (intent.getAction().equals(ACTION_PLAY)) {
 		if(fIndex>yConst.sIdLocalLast){
 			File fFile = new File(getExternalCacheDir(),
@@ -58,6 +58,8 @@ public class MyService extends Service implements MediaPlayer.OnPreparedListener
         mediaPlayer.setOnPreparedListener(this);
             //mediaPlayer.prepareAsync(); // prepare async to not block main thread
         //}
+		if(fProg>0)
+			mediaPlayer.seekTo((int)fProg);
 		mTotalDuration = mediaPlayer.getDuration();
 		//onPrepared(mediaPlayer);
 		mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){

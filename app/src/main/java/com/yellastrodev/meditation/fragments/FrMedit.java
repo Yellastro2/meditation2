@@ -1,5 +1,7 @@
 package com.yellastrodev.meditation.fragments;
 
+import static com.yellastrodev.meditation.yConst.kTimePause;
+
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -75,7 +77,9 @@ public class FrMedit extends iFragment {
 	};
 
 	private AlertDialog mProgressDial;
-	
+
+    private String kPausedMedit = "pausedmedit";
+
     @Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View fView = inflater.inflate(R.layout.fr_medit, null);
@@ -183,7 +187,8 @@ public class FrMedit extends iFragment {
 		
 	}
 
-	
+	boolean isSaveTime = true;
+
 	@Override
 	public void onPause() {
 		try{
@@ -193,10 +198,20 @@ public class FrMedit extends iFragment {
 			totalPause();
 			if(mService!=null){
 				int fPerc= mService.getProgressPercs();
-				fPerc = ((int)(fPerc/20))*20;
-			mMain.sendAnality("meditation_listen_"+
-							mMedit+"_"+
-					fPerc);
+				if(isSaveTime){
+				    long fProg = mService.getProgressTime();
+				    mPreff.edit().putLong(kTimePause,fProg)
+                            .putInt(kPausedMedit,mMedit).apply();
+                }else {
+                    mPreff.edit().putLong(kTimePause,0)
+                            .putInt(kPausedMedit,-1).apply();
+
+
+                    fPerc = ((int) (fPerc / 20)) * 20;
+                    mMain.sendAnality("meditation_listen_" +
+                            mMedit + "_" +
+                            fPerc);
+                }
 			}
 		}
 		}catch(Exception e){mMain.sendException(e);}
@@ -271,9 +286,13 @@ public class FrMedit extends iFragment {
 		try{
 					Intent fIntent = new Intent(mMain, MyService.class);
 					fIntent.putExtra(yConst.kCurentMedit,mMedit);
+					if(mPreff.getInt(kPausedMedit,-1)==mMedit){
+					    fIntent.putExtra(kTimePause,mPreff.getLong(kTimePause,0));
+                    }
 					mMain.startService(fIntent);
 					mMain.bindService(fIntent, connection, Context.BIND_AUTO_CREATE);
 					isServiceStart=true;
+
 			mMain.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 			mThread = new Thread(){
 
@@ -327,7 +346,10 @@ public class FrMedit extends iFragment {
 
 	public void onEndSong() {
 		try{
-		mvCompl1.setVisibility(View.VISIBLE);
+            mPreff.edit().putLong(kTimePause,0)
+                    .putInt(kPausedMedit,-1).apply();
+
+            mvCompl1.setVisibility(View.VISIBLE);
 		mvCompl2.setVisibility(View.VISIBLE);
 		mvPlayBtn.setEnabled(false);
 		totalPause();
