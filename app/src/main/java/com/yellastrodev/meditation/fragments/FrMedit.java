@@ -135,7 +135,8 @@ public class FrMedit extends iFragment {
 				onPlayClick();
 			}
 		};
-		
+		fView.findViewById(R.id.fr_meditplaylay)
+				.setOnClickListener(fOnPlay);
 		mvPlayBtn.setOnClickListener(fOnPlay);
 		mvPauseBtn.setOnClickListener(fOnPlay);
 		mvPauseBtn.setVisibility(View.GONE);

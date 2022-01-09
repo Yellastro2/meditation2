@@ -85,7 +85,7 @@ public class FrAffirm extends iFragment {
 					fStr += fArr.get(qInd)+",";
 					fArr.remove(qInd);
 				}
-				fStr.substring(0,fStr.length()-2);
+				fStr = fStr.substring(0,fStr.length()-2);
 				Log.i(yConst.TAG,"affirm set: "+fStr);
 				mMain.getPreff().edit().putString(kAffirmRandom,fStr).apply();
 			}else{

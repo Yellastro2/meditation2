@@ -41,6 +41,7 @@
 		</RelativeLayout>
 
 		<RelativeLayout
+			android:id="@+id/fr_meditplaylay"
 			android:baseline="100dp"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="0dp"
