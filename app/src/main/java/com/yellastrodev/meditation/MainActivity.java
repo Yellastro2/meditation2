@@ -130,9 +130,9 @@ public class MainActivity extends FragmentActivity {
 		readLog();
 		
 		mFB = FbFiles.initFB(this);
-		int fDim = getResources().getInteger(R.integer.dimen_type);
+		/*int fDim = getResources().getInteger(R.integer.dimen_type);
 		Toast.makeText(this,"screen type: "+fDim,
-		Toast.LENGTH_LONG).show();
+		Toast.LENGTH_LONG).show();*/
 		
 		DisplayMetrics metrics = getResources().getDisplayMetrics();
 		
@@ -145,9 +145,9 @@ public class MainActivity extends FragmentActivity {
 		AllOneReceiver.setRepeat(this);
 
 
-		int fLaunchCount = getPreff().getInt("launch_count", 1);
-		mFB.sendAnality("session_start_"+fLaunchCount);
-		 getPreff().edit().putInt("launch_count",fLaunchCount+ 1).apply();
+		//int fLaunchCount = getPreff().getInt("launch_count", 1);
+		mFB.sendAnality("session_start");
+	//	 getPreff().edit().putInt("launch_count",fLaunchCount+ 1).apply();
 		mvBackBtn = findViewById(R.id.activity_mainBtnBack);
 		mvBackBtn.setOnClickListener(new View.OnClickListener() {
 				@Override

@@ -195,13 +195,16 @@ public class FrMedit extends iFragment {
 	@Override
 	public void onPause() {
 		try{
+			Toast.makeText(mMain,"onpause",Toast.LENGTH_LONG);
 		super.onPause();
 		if(isServiceStart)
 		{
-
+			Toast.makeText(mMain,"isservice",Toast.LENGTH_LONG);
 			if(mService!=null){
+				Toast.makeText(mMain,"isserv2",Toast.LENGTH_LONG);
 				int fPerc= mService.getProgressPercs();
 				if(isSaveTime){
+					Toast.makeText(mMain,"savetime",Toast.LENGTH_LONG);
 				    long fProg = mService.getProgressTime();
 				    mPreff.edit().putLong(kTimePause,fProg)
                             .putInt(kPausedMedit,mMedit).apply();
@@ -209,7 +212,7 @@ public class FrMedit extends iFragment {
                     mPreff.edit().putLong(kTimePause,0)
                             .putInt(kPausedMedit,-1).apply();
 
-
+					Toast.makeText(mMain,"break",Toast.LENGTH_LONG);
                     fPerc = ((int) (fPerc / 20)) * 20;
 					Toast.makeText(mMain,"break at "+fPerc,Toast.LENGTH_LONG);
                     mMain.sendAnality("meditation_listen_" +
