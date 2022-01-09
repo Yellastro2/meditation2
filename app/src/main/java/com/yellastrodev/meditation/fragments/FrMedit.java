@@ -14,6 +14,7 @@ import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +28,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.yellastrodev.meditation.FbFiles;
 import com.yellastrodev.meditation.MainActivity;
 import com.yellastrodev.meditation.MyService;
@@ -208,8 +211,9 @@ public class FrMedit extends iFragment {
 
 
                     fPerc = ((int) (fPerc / 20)) * 20;
+					Toast.makeText(mMain,"break at "+fPerc,Toast.LENGTH_LONG);
                     mMain.sendAnality("meditation_listen_" +
-                            mMedit + "_" +
+							(mMedit+1) + "_" +
                             fPerc);
                 }
 			}
