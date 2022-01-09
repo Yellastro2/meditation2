@@ -2,6 +2,7 @@ package com.yellastrodev.meditation.fragments;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import com.money.meditation.affirmation.R;
 import com.yellastrodev.meditation.AllOneReceiver;
+import com.yellastrodev.meditation.yConst;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -60,7 +63,9 @@ public class FrAffirm extends iFragment {
 		String [] list;
 		try {
 			list = mMain.getAssets().list("");
+			Log.i(yConst.TAG,"asset size - "+list.length);
 			if (list.length > 0) {
+
 				// This is a folder
 				int fImg = (int)(Math.random() * list.length);
 				
@@ -68,7 +73,7 @@ public class FrAffirm extends iFragment {
 				// load image as Drawable
 				Drawable d = Drawable.createFromStream(ims, null);
 				// set image to ImageView
-				fView.setBackgroundDrawable(d);
+				fView.setBackground(d);
 				
 				//fView.setBackgroundResource(sImages[fImg]);
 				
