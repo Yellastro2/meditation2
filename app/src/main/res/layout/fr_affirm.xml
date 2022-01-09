@@ -6,7 +6,14 @@
 	android:layout_height="match_parent"
 	
 	android:background="@drawable/image_1">
-	
+
+	<ImageView
+		android:src="@android:drawable/ic_delete"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/fr_affirmimg"
+		android:scaleType="centerCrop"/>
+
 	<RelativeLayout
 		
 		android:layout_width="match_parent"

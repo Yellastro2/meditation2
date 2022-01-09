@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.money.meditation.affirmation.R;
@@ -61,12 +62,12 @@ public class FrAffirm extends iFragment {
 		((TextView)fView.findViewById(R.id.fr_affirmTextView))
 		.setText(fBody);
 		
-		loadImg(fView);
+		loadImg(fView.findViewById(R.id.fr_affirmimg));
 		return fView;
 	}
     
     
-    void loadImg(View fView){
+    void loadImg(ImageView fView){
 		String [] list;
 		try {
 			list = mMain.getAssets().list("");
@@ -107,8 +108,8 @@ public class FrAffirm extends iFragment {
 				// load image as Drawable
 				Drawable d = Drawable.createFromStream(ims, null);
 				// set image to ImageView
-				ScaleDrawable fDraw = new ScaleDrawable(d, Gravity.CLIP_VERTICAL, 1, 1);
-				fView.setBackground(fDraw);
+
+				fView.setImageDrawable(d);
 				
 				//fView.setBackgroundResource(sImages[fImg]);
 				
