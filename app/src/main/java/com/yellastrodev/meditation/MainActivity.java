@@ -298,8 +298,8 @@ public class MainActivity extends FragmentActivity {
 		mFB.mAdapty.checkSubs(new yClb(){
 			public void run(String fRes){
 				if(fRes.equals("ok")){
-					if(!getPreff().getBoolean(yConst.kSubs,false))
-						openFrame(new FrMain(),false);
+					/*if(!getPreff().getBoolean(yConst.kSubs,false))
+						openFrame(new FrMain(),false);*/
 					getPreff().edit().putBoolean(yConst.kSubs,true)
 					.apply();
 				}else
