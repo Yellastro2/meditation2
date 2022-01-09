@@ -475,8 +475,11 @@ public class FrMedit extends iFragment {
 						mPreff.edit().putLong(kTimePause,0)
 								.putInt(kPausedMedit,-1).apply();
 
-						Toast.makeText(mMain,"break",Toast.LENGTH_LONG);
-						fPerc = ((int) (fPerc / 20)) * 20;
+						Log.i(yConst.TAG,"perc "+fPerc);
+						fPerc = fPerc/20;
+						Log.i(yConst.TAG,"perc "+fPerc);
+						fPerc = fPerc*20;
+						Log.i(yConst.TAG,"perc "+fPerc);
 						Toast.makeText(mMain,"break at "+fPerc,Toast.LENGTH_LONG);
 						mMain.sendAnality("meditation_listen_" +
 								(mMedit+1) + "_" +
