@@ -29,8 +29,9 @@ public class FrSettAffirm extends iFragment {
 	private SharedPreferences mPreff;
 
 	private String isFirstAffirm;
+	private boolean isFitstcange;
 
-    @Override
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View fView = inflater.inflate(R.layout.fr_settaffirm, null);
 		
@@ -42,7 +43,7 @@ public class FrSettAffirm extends iFragment {
 		//mScrollView = fView.findViewById(R.id.fr_faqScrollView);
 		mvSeekLegend = fView.findViewById(R.id.fr_affirmLinSeekbarLegend);
 		mvSeekBar = fView.findViewById(R.id.fr_affirmSeekPrg);
-    
+    	isFitstcange = true;
     	initSeekLegend();
 		mvSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
@@ -66,6 +67,9 @@ public class FrSettAffirm extends iFragment {
 					mvItemSelect = fVItem;
 					
 					mPreff.edit().putInt(yConst.kFreq,p2+1).apply();
+					if(isFitstcange)
+						isFitstcange = false;
+					else
 						mMain.sendAnality("affirmation_frequency_"+(p2+1));
 				}
 				@Override

@@ -470,6 +470,18 @@ public class FrMedit extends iFragment {
 				@Override
 				public void onClick(DialogInterface p1, int p2) {
 					isSaveTime = false;
+					if(mService!= null){
+						int fPerc = mService.getProgressPercs();
+						mPreff.edit().putLong(kTimePause,0)
+								.putInt(kPausedMedit,-1).apply();
+
+						Toast.makeText(mMain,"break",Toast.LENGTH_LONG);
+						fPerc = ((int) (fPerc / 20)) * 20;
+						Toast.makeText(mMain,"break at "+fPerc,Toast.LENGTH_LONG);
+						mMain.sendAnality("meditation_listen_" +
+								(mMedit+1) + "_" +
+								fPerc);
+					}
 					mMain.forseBackPress();
 				}
 			})
